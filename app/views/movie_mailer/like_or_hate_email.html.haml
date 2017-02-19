@@ -1,0 +1,23 @@
+!!!
+%html
+  %head
+    %title MovieRama
+    %meta{ 'http-equiv' => 'content-type', content: "text/html;charset=UTF-8" }/
+    %meta{ charset: 'utf-8' }/
+  %body
+    %p
+      Hi
+      =@movie.user.name
+    %p
+      - if @like_or_hate == :like
+        Someone likes your movie submission 
+        =@movie.title
+      - else
+        Someone hates your movie submission 
+        =@movie.title 
+    %p 
+      It now has a total of 
+      =pluralize(@movie.likers.size , 'like') 
+      and 
+      =pluralize(@movie.haters.size , 'hate') 
+      !
