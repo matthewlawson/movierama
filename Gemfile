@@ -59,7 +59,6 @@ gem 'pry'
 gem 'pry-nav'
 gem 'pry-doc'
 
-gem 'rspec-activemodel-mocks'
 group :test do
   gem 'guard-rspec'    # Continuous testing
   gem 'rspec-rails'    # Test framework with Rail extensions
