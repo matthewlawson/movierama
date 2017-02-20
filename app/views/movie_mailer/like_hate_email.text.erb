@@ -1,0 +1,9 @@
+Hi <%= @movie.user.name %>%
+
+<% if @like_or_hate == :like %>
+  Someone likes your movie submission <%= @movie.title %>
+<% else %>
+  Someone hates your movie submission <%= @movie.title %>
+<% end %>
+  
+It now has a total of <%=pluralize(@movie.likers.size , 'like') %> and <%= pluralize(@movie.haters.size , 'hate') %>

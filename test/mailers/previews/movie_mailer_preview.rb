@@ -16,11 +16,4 @@ class MovieMailerPreview < ActionMailer::Preview
     email
   end
 
-#   def _setup
-#     @movie = Movie[2]
-#     puts @movie.inspect
-#   end
-#   def _teardown
-#     @movie.delete()
-#   end
 end
