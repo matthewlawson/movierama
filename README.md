@@ -75,6 +75,13 @@ Populate the following fields in `.env`
 
 `SMTP_GMAIL_PASSWORD: ***`
 
+##### Sidekiq
+Email sending is processed in the background so that the user does not have to wait for smtp servers to respond before an email notification is sucessful.
+
+Start sidekiq using the following command:
+
+    $ bundle exec sidekiq
+
 
 ### Screenshot
 

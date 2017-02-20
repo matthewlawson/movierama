@@ -40,4 +40,7 @@ RSpec.describe MovieMailer, type: :mailer do
         expect(@mail.body.encoded).to match(@movie.user.name)
       end
   end
+  after do
+    @movie.delete()
+  end
 end
