@@ -3,7 +3,7 @@ class VotesController < ApplicationController
     authorize! :vote, _movie
 
     _voter.vote(_type)
-    #MovieMailer.like_or_hate_email(_movie, _type).deliver
+    MovieMailer.like_or_hate_email(_movie, _type).deliver
     redirect_to root_path, notice: 'Vote cast'
   end
 

@@ -14,7 +14,7 @@ Rails.application.configure do
   config.action_controller.perform_caching = false
 
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
@@ -33,4 +33,15 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
   #OmniAuthh incorrectly getting hostname
   OmniAuth.config.full_host = "https://movierama.dev"
+  #Action mailer settings
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address:              'smtp.gmail.com',
+    port:                 587,
+    domain:               'gmail.com',
+    user_name:            ENV['SMTP_GMAIL_USER'],
+    password:             ENV['SMTP_GMAIL_PASSWORD'],
+    authentication:       :login,
+    enable_starttls_auto: true
+  }
 end
