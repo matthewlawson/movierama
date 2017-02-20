@@ -66,6 +66,15 @@ If not, you'll need to get your own OAuth tokens from Github and edit
 `.env` appropriately.
 
 
+#### Getting emails to work
+If using two factor authentication on your gmail account, sign up for an application specific gmail password using [these instructions](https://support.google.com/mail/answer/185833?hl=en)
+
+Populate the following fields in `.env`
+
+`SMTP_GMAIL_USER: ***@gmail.com`
+
+`SMTP_GMAIL_PASSWORD: ***`
+
 
 ### Screenshot
 
