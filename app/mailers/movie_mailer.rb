@@ -4,8 +4,9 @@ class MovieMailer < ActionMailer::Base
   def like_or_hate_email(movie, like_or_hate)
     @movie  = movie
     @like_or_hate = like_or_hate
-    @user = @movie.user
+    
+    @user = User[movie.user_id]
     subject = if like_or_hate == :like then "Your movie has a new like :)" else "Your movie has a new hate :(" end
-    mail(to: movie.user.email, subject: subject)
+    mail(to: @user.email, subject: subject)
   end
 end

@@ -3,7 +3,7 @@ require File.expand_path('../application', __FILE__)
 
 Rails.application.configure do
   config.autoload_paths += %W(#{config.root}/app/services)
-
+  config.autoload_paths += %W(#{config.root}/app/workers)
   config.middleware.use ActionDispatch::Flash
   config.middleware.insert 0, Rack::SSL
 end
